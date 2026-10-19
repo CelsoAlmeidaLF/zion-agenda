@@ -1,0 +1,22 @@
+{
+  "name": "Studio Agenda",
+  "short_name": "Studio Agenda",
+  "description": "Agenda de atendimentos, comandas, caixa e comissões para estúdios de beleza.",
+  "lang": "pt-BR",
+  "start_url": "./index.html#/agenda",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f3f5",
+  "theme_color": "#c2255c",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Agenda de hoje", "url": "./index.html#/agenda" },
+    { "name": "Caixa do dia", "url": "./index.html#/caixa" },
+    { "name": "Novo cliente", "url": "./index.html#/clientes?novo=1" }
+  ]
+}
