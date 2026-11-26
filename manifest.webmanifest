@@ -1,6 +1,6 @@
 {
-  "name": "Studio Agenda",
-  "short_name": "Studio Agenda",
+  "name": "ZION Agenda",
+  "short_name": "ZION Agenda",
   "description": "Agenda de atendimentos, comandas, caixa e comissões para estúdios de beleza.",
   "lang": "pt-BR",
   "start_url": "./index.html#/agenda",

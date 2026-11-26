@@ -1,4 +1,4 @@
-# Studio Agenda · PWA
+# ZION Agenda · PWA
 
 > Agenda de atendimentos, comandas, caixa e comissões para estúdios de beleza e salões.
 

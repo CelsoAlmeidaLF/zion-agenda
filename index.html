@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Studio Agenda</title>
+<title>ZION Agenda</title>
 <meta name="description" content="Agenda de atendimentos, comandas, caixa e comissões para estúdios de beleza.">
 <meta name="theme-color" content="#c2255c">
 <meta name="color-scheme" content="light">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Studio Agenda">
+<meta name="apple-mobile-web-app-title" content="ZION Agenda">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
@@ -255,7 +255,7 @@ dialog::backdrop{background:var(--overlay)}
     <button class="mi" data-act="import" title="Importar backup"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 19h16"/></svg><span class="lbl">Importar backup</span></button>
     <button class="mi" data-act="reset" title="Dados de exemplo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg><span class="lbl">Dados de exemplo</span></button>
     <button class="mi" data-act="install" id="installBtn" hidden title="Instalar app"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v7M9 12l3 3 3-3"/></svg><span class="lbl">Instalar app</span></button>
-    <div class="ver">Studio Agenda v0.1 (MVP)</div>
+    <div class="ver">ZION Agenda v0.1 (MVP)</div>
   </nav>
   <div class="scrim" id="scrim" data-act="close-menu"></div>
 
@@ -263,7 +263,7 @@ dialog::backdrop{background:var(--overlay)}
     <header class="appbar">
       <button class="ibtn menu-btn" data-act="menu" aria-label="Abrir menu" aria-controls="side"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
       <span id="back"></span>
-      <div class="ttl"><div class="sup" id="sup"></div><h1 id="ttl">Studio Agenda</h1></div>
+      <div class="ttl"><div class="sup" id="sup"></div><h1 id="ttl">ZION Agenda</h1></div>
       <div class="acts" id="acts"></div>
     </header>
     <main class="view" id="view" tabindex="-1"></main>
@@ -279,7 +279,7 @@ dialog::backdrop{background:var(--overlay)}
 <script>
 'use strict';
 /* =========================================================
-   Studio Agenda — MVP (HTML + PWA, sem dependências)
+   ZION Agenda — MVP (HTML + PWA, sem dependências)
    Camadas: utils → store (localStorage) → domínio (regras) → views → eventos
    ========================================================= */
 
@@ -548,7 +548,7 @@ function setBar({sup = '', title = '', back = null, actions = ''}) {
   $('#back').innerHTML = back ? `<a class="ibtn" href="${back}" aria-label="Voltar">${ICON.back}</a>` : '';
   document.querySelector('.menu-btn').style.display = back && isMobile() ? 'none' : '';
   $('#acts').innerHTML = actions;
-  document.title = (title ? title + ' · ' : '') + 'Studio Agenda';
+  document.title = (title ? title + ' · ' : '') + 'ZION Agenda';
 }
 const profsAgenda = () => db.profissionais.filter(p => p.ativo && p.atende);
 
@@ -1070,7 +1070,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu();
 /* ---------- Backup ---------- */
 function exportar() {
   const blob = new Blob([JSON.stringify(db, null, 2)], {type: 'application/json'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `studio-agenda-backup-${today()}.json`; a.click();
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `zion-agenda-backup-${today()}.json`; a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000); toast('Backup exportado');
 }
 $('#fileIn').addEventListener('change', async e => {

@@ -1,7 +1,7 @@
-/* Studio Agenda — Service Worker
+/* ZION Agenda — Service Worker
  * Estratégia: app shell em cache-first (versionado); Google Fonts em stale-while-revalidate.
  */
-const VERSION = 'studio-agenda-v0.1.2';
+const VERSION = 'zion-agenda-v0.1.3';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icon.svg', './icon-maskable.svg'
 ];
