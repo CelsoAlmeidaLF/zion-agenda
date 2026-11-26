@@ -1,7 +1,7 @@
 /* ZION Agenda — Service Worker
  * Estratégia: app shell em cache-first (versionado); Google Fonts em stale-while-revalidate.
  */
-const VERSION = 'zion-agenda-v0.1.3';
+const VERSION = 'zion-agenda-v0.1.4';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icon.svg', './icon-maskable.svg'
 ];
