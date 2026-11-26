@@ -1,14 +1,9 @@
 /* Studio Agenda — Service Worker
  * Estratégia: app shell em cache-first (versionado); Google Fonts em stale-while-revalidate.
  */
-const VERSION = 'studio-agenda-v0.1.1';
+const VERSION = 'studio-agenda-v0.1.2';
 const SHELL = [
-  './', './index.html', './manifest.webmanifest', './icon.svg', './icon-maskable.svg',
-  './apoio/apoio.css',
-  './apoio/stk-pkt-doacao.js',
-  './apoio/stk-pkt-feedback.js',
-  './apoio/stk-pkt-qrcode.js',
-  './apoio/stk-pkt-ponte.js'
+  './', './index.html', './manifest.webmanifest', './icon.svg', './icon-maskable.svg'
 ];
 
 self.addEventListener('install', (e) => {

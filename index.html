@@ -15,7 +15,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,600&display=swap">
-<link rel="stylesheet" href="apoio/apoio.css" id="dz-style">
 <style>
 /* ===================== TOKENS (design-tokens.md) ===================== */
 :root{
@@ -256,10 +255,6 @@ dialog::backdrop{background:var(--overlay)}
     <button class="mi" data-act="import" title="Importar backup"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 19h16"/></svg><span class="lbl">Importar backup</span></button>
     <button class="mi" data-act="reset" title="Dados de exemplo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg><span class="lbl">Dados de exemplo</span></button>
     <button class="mi" data-act="install" id="installBtn" hidden title="Instalar app"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v7M9 12l3 3 3-3"/></svg><span class="lbl">Instalar app</span></button>
-    <hr>
-    <button class="mi" data-act="apoiar" title="Apoiar com PIX ou Bitcoin"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="lbl">Apoiar (PIX/BTC)</span></button>
-    <button class="mi" data-act="avaliar" title="Avaliar o app"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="lbl">Avaliar app</span></button>
-    <button class="mi" data-act="sugerir" title="Enviar feedback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="lbl">Enviar feedback</span></button>
     <div class="ver">Studio Agenda v0.1 (MVP)</div>
   </nav>
   <div class="scrim" id="scrim" data-act="close-menu"></div>
@@ -980,9 +975,6 @@ document.addEventListener('click', e => {
     case 'import': $('#fileIn').click(); break;
     case 'reset': if (confirm('Substituir todos os dados pelos dados de exemplo?')) { seed(); filtroProfs = null; detailSel = null; render(); toast('Dados de exemplo carregados'); } break;
     case 'install': if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt = null; $('#installBtn').hidden = true; } break;
-    case 'apoiar': if (window.Doacao) window.Doacao.abrir(); break;
-    case 'avaliar': if (window.Doacao) window.Doacao.abrir('avaliar'); break;
-    case 'sugerir': if (window.Doacao) window.Doacao.abrir('sugerir'); break;
   }
 });
 document.addEventListener('input', e => {
@@ -1106,8 +1098,5 @@ addEventListener('resize', () => { if (isWide() !== lastWide) { lastWide = isWid
 setInterval(() => { if (route.name === 'agenda' && !dlg.open) { const s = $('#agendaScroll')?.scrollTop; render(); if ($('#agendaScroll') && s != null) $('#agendaScroll').scrollTop = s; } }, 60000);
 render();
 </script>
-<script src="apoio/stk-pkt-ponte.js"></script>
-<script src="apoio/stk-pkt-feedback.js"></script>
-<script src="apoio/stk-pkt-doacao.js" data-app="AGENDA" data-flutuante="false"></script>
 </body>
 </html>
