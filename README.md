@@ -6,7 +6,7 @@ Aplicação de página única (SPA) instalável (*Progressive Web App*), desenvo
 
 ## Demonstração Online
 Acesse a versão em produção via GitHub Pages:
-👉 **[https://celsoalmeidalf.github.io/studio-agenda/](https://celsoalmeidalf.github.io/studio-agenda/)**
+👉 **[https://celsoalmeidalf.github.io/zion-agenda/](https://celsoalmeidalf.github.io/zion-agenda/)**
 
 ---
 
